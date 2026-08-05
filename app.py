@@ -31,7 +31,7 @@ def health_check():
 def run_agent(request: ChatRequest):
     try:
         response = client.chat.completions.create(
-            model="nousresearch/hermes-3-llama-3.1-8b:free",
+            model="meta-llama/llama-3-8b-instruct:free",
             messages=[
                 {"role": "system", "content": "Tu es un assistant IA utile, concis et direct."},
                 {"role": "user", "content": request.message}

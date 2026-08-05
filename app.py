@@ -31,7 +31,7 @@ def health_check():
 def run_agent(request: ChatRequest):
     try:
         response = client.chat.completions.create(
-            model="meta-llama/llama-3.1-8b-instruct:free",
+            model="google/gemma-2-9b-it:free",
             messages=[
                 {"role": "system", "content": "Tu es un assistant IA utile, concis et direct."},
                 {"role": "user", "content": request.message}
